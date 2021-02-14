@@ -11,7 +11,8 @@ pipeline {
 				echo 'launch test'
 				sh 'php vendor/phpunit/phpunit/phpunit MSPR2/tests'
 				
-				
+				echo 'launch test coverage'
+				sh 'php vendor/phpunit/phpunit/phpunit MSPR2/tests/ --coverage-xml MSPR2/tests/ --whitelist MSPR2/src/'
 			}
 		}
 	}
